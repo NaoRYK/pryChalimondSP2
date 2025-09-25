@@ -29,21 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReserva));
-            lstShackType = new ComboBox();
-            lstQuantity = new ComboBox();
-            numDays = new NumericUpDown();
-            chkKitchen = new CheckBox();
-            chkFridge = new CheckBox();
-            chkTv = new CheckBox();
-            radioCash = new RadioButton();
-            radioCard = new RadioButton();
-            txtName = new TextBox();
-            txtPhone = new TextBox();
-            btnSumbit = new Button();
+            cmbTipo = new ComboBox();
+            cmbPersonas = new ComboBox();
+            chkCocina = new CheckBox();
+            chkHeladera = new CheckBox();
+            chkTelevisor = new CheckBox();
+            optEfectivo = new RadioButton();
+            optTarjeta = new RadioButton();
+            txtNombre = new TextBox();
+            txtTelefonos = new TextBox();
+            btnAceptar = new Button();
             lblPeople = new Label();
             lblDays = new Label();
             lblPaymentTypes = new Label();
-            lstCardList = new ComboBox();
+            cmbTarjeta = new ComboBox();
             lblCreditCards = new Label();
             lblName = new Label();
             lblTitular = new Label();
@@ -51,82 +50,83 @@
             lblAditional = new Label();
             lblType = new Label();
             pnlShackType = new Panel();
+            txtDias = new TextBox();
             tagShackType = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)numDays).BeginInit();
             pnlShackType.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
             // 
-            // lstShackType
+            // cmbTipo
             // 
-            lstShackType.FormattingEnabled = true;
-            lstShackType.Items.AddRange(new object[] { resources.GetString("lstShackType.Items"), resources.GetString("lstShackType.Items1") });
-            resources.ApplyResources(lstShackType, "lstShackType");
-            lstShackType.Name = "lstShackType";
+            cmbTipo.FormattingEnabled = true;
+            cmbTipo.Items.AddRange(new object[] { resources.GetString("cmbTipo.Items"), resources.GetString("cmbTipo.Items1") });
+            resources.ApplyResources(cmbTipo, "cmbTipo");
+            cmbTipo.Name = "cmbTipo";
+            cmbTipo.SelectedIndexChanged += cmbTipo_SelectedIndexChanged;
             // 
-            // lstQuantity
+            // cmbPersonas
             // 
-            lstQuantity.FormattingEnabled = true;
-            resources.ApplyResources(lstQuantity, "lstQuantity");
-            lstQuantity.Name = "lstQuantity";
+            cmbPersonas.FormattingEnabled = true;
+            resources.ApplyResources(cmbPersonas, "cmbPersonas");
+            cmbPersonas.Name = "cmbPersonas";
             // 
-            // numDays
+            // chkCocina
             // 
-            resources.ApplyResources(numDays, "numDays");
-            numDays.Name = "numDays";
+            resources.ApplyResources(chkCocina, "chkCocina");
+            chkCocina.Name = "chkCocina";
+            chkCocina.UseVisualStyleBackColor = true;
             // 
-            // chkKitchen
+            // chkHeladera
             // 
-            resources.ApplyResources(chkKitchen, "chkKitchen");
-            chkKitchen.Name = "chkKitchen";
-            chkKitchen.UseVisualStyleBackColor = true;
+            resources.ApplyResources(chkHeladera, "chkHeladera");
+            chkHeladera.Name = "chkHeladera";
+            chkHeladera.UseVisualStyleBackColor = true;
             // 
-            // chkFridge
+            // chkTelevisor
             // 
-            resources.ApplyResources(chkFridge, "chkFridge");
-            chkFridge.Name = "chkFridge";
-            chkFridge.UseVisualStyleBackColor = true;
+            resources.ApplyResources(chkTelevisor, "chkTelevisor");
+            chkTelevisor.Name = "chkTelevisor";
+            chkTelevisor.UseVisualStyleBackColor = true;
             // 
-            // chkTv
+            // optEfectivo
             // 
-            resources.ApplyResources(chkTv, "chkTv");
-            chkTv.Name = "chkTv";
-            chkTv.UseVisualStyleBackColor = true;
+            resources.ApplyResources(optEfectivo, "optEfectivo");
+            optEfectivo.Name = "optEfectivo";
+            optEfectivo.TabStop = true;
+            optEfectivo.UseVisualStyleBackColor = true;
+            optEfectivo.CheckedChanged += optEfectivo_CheckedChanged;
             // 
-            // radioCash
+            // optTarjeta
             // 
-            resources.ApplyResources(radioCash, "radioCash");
-            radioCash.Name = "radioCash";
-            radioCash.TabStop = true;
-            radioCash.UseVisualStyleBackColor = true;
+            resources.ApplyResources(optTarjeta, "optTarjeta");
+            optTarjeta.Name = "optTarjeta";
+            optTarjeta.TabStop = true;
+            optTarjeta.UseVisualStyleBackColor = true;
+            optTarjeta.CheckedChanged += optTarjeta_CheckedChanged;
             // 
-            // radioCard
+            // txtNombre
             // 
-            resources.ApplyResources(radioCard, "radioCard");
-            radioCard.Name = "radioCard";
-            radioCard.TabStop = true;
-            radioCard.UseVisualStyleBackColor = true;
+            resources.ApplyResources(txtNombre, "txtNombre");
+            txtNombre.Name = "txtNombre";
+            txtNombre.TextChanged += txtNombre_TextChanged;
             // 
-            // txtName
+            // txtTelefonos
             // 
-            resources.ApplyResources(txtName, "txtName");
-            txtName.Name = "txtName";
+            resources.ApplyResources(txtTelefonos, "txtTelefonos");
+            txtTelefonos.Name = "txtTelefonos";
+            txtTelefonos.TextChanged += txtTelefonos_TextChanged;
             // 
-            // txtPhone
+            // btnAceptar
             // 
-            resources.ApplyResources(txtPhone, "txtPhone");
-            txtPhone.Name = "txtPhone";
-            // 
-            // btnSumbit
-            // 
-            resources.ApplyResources(btnSumbit, "btnSumbit");
-            btnSumbit.Name = "btnSumbit";
-            btnSumbit.UseVisualStyleBackColor = true;
+            resources.ApplyResources(btnAceptar, "btnAceptar");
+            btnAceptar.Name = "btnAceptar";
+            btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // lblPeople
             // 
@@ -143,11 +143,11 @@
             resources.ApplyResources(lblPaymentTypes, "lblPaymentTypes");
             lblPaymentTypes.Name = "lblPaymentTypes";
             // 
-            // lstCardList
+            // cmbTarjeta
             // 
-            lstCardList.FormattingEnabled = true;
-            resources.ApplyResources(lstCardList, "lstCardList");
-            lstCardList.Name = "lstCardList";
+            cmbTarjeta.FormattingEnabled = true;
+            resources.ApplyResources(cmbTarjeta, "cmbTarjeta");
+            cmbTarjeta.Name = "cmbTarjeta";
             // 
             // lblCreditCards
             // 
@@ -181,15 +181,21 @@
             // 
             // pnlShackType
             // 
+            pnlShackType.Controls.Add(txtDias);
             pnlShackType.Controls.Add(lblType);
             pnlShackType.Controls.Add(lblDays);
             pnlShackType.Controls.Add(lblPeople);
-            pnlShackType.Controls.Add(numDays);
-            pnlShackType.Controls.Add(lstQuantity);
-            pnlShackType.Controls.Add(lstShackType);
+            pnlShackType.Controls.Add(cmbPersonas);
+            pnlShackType.Controls.Add(cmbTipo);
             resources.ApplyResources(pnlShackType, "pnlShackType");
             pnlShackType.Name = "pnlShackType";
             pnlShackType.Tag = "";
+            // 
+            // txtDias
+            // 
+            resources.ApplyResources(txtDias, "txtDias");
+            txtDias.Name = "txtDias";
+            txtDias.TextChanged += txtDias_TextChanged;
             // 
             // tagShackType
             // 
@@ -198,18 +204,18 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(chkTv);
-            panel1.Controls.Add(chkFridge);
-            panel1.Controls.Add(chkKitchen);
+            panel1.Controls.Add(chkTelevisor);
+            panel1.Controls.Add(chkHeladera);
+            panel1.Controls.Add(chkCocina);
             resources.ApplyResources(panel1, "panel1");
             panel1.Name = "panel1";
             // 
             // panel2
             // 
             panel2.Controls.Add(lblCreditCards);
-            panel2.Controls.Add(lstCardList);
-            panel2.Controls.Add(radioCard);
-            panel2.Controls.Add(radioCash);
+            panel2.Controls.Add(cmbTarjeta);
+            panel2.Controls.Add(optTarjeta);
+            panel2.Controls.Add(optEfectivo);
             resources.ApplyResources(panel2, "panel2");
             panel2.Name = "panel2";
             // 
@@ -217,14 +223,14 @@
             // 
             panel3.Controls.Add(lblPhone);
             panel3.Controls.Add(lblName);
-            panel3.Controls.Add(txtPhone);
-            panel3.Controls.Add(txtName);
+            panel3.Controls.Add(txtTelefonos);
+            panel3.Controls.Add(txtNombre);
             resources.ApplyResources(panel3, "panel3");
             panel3.Name = "panel3";
             // 
             // frmReserva
             // 
-            AcceptButton = btnSumbit;
+            AcceptButton = btnAceptar;
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel3);
@@ -235,11 +241,10 @@
             Controls.Add(lblAditional);
             Controls.Add(lblTitular);
             Controls.Add(lblPaymentTypes);
-            Controls.Add(btnSumbit);
+            Controls.Add(btnAceptar);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmReserva";
             Load += frmReserva_Load;
-            ((System.ComponentModel.ISupportInitialize)numDays).EndInit();
             pnlShackType.ResumeLayout(false);
             pnlShackType.PerformLayout();
             panel1.ResumeLayout(false);
@@ -254,24 +259,23 @@
 
         #endregion
 
-        private ComboBox lstShackType;
-        private ComboBox lstQuantity;
-        private NumericUpDown numDays;
-        private CheckBox chkKitchen;
-        private CheckBox chkFridge;
-        private CheckBox chkTv;
-        private RadioButton radioCash;
-        private RadioButton radioCard;
+        private ComboBox cmbTipo;
+        private ComboBox cmbPersonas;
+        private CheckBox chkCocina;
+        private CheckBox chkHeladera;
+        private CheckBox chkTelevisor;
+        private RadioButton optEfectivo;
+        private RadioButton optTarjeta;
         private ComboBox comboBox3;
-        private TextBox txtName;
-        private TextBox txtPhone;
-        private Button btnSumbit;
+        private TextBox txtNombre;
+        private TextBox txtTelefonos;
+        private Button btnAceptar;
         private Label tagShackType;
         private Label lblPeople;
         private Label lblDays;
         private Label label4;
         private Label lblPaymentTypes;
-        private ComboBox lstCardList;
+        private ComboBox cmbTarjeta;
         private Label lblCreditCards;
         private Label lblName;
         private Label lblTitular;
@@ -282,5 +286,6 @@
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
+        private TextBox txtDias;
     }
 }
